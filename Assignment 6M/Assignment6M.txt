@@ -1,0 +1,59 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "low",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "high",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "SimpleSkill"
+    },
+    {
+      "slots": [
+        {
+          "name": "x",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "y",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "operation",
+          "type": "operation"
+        }
+      ],
+      "intent": "OperationIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "num",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "ResponseIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
+
+Custom Slot Types:
+Type: operation
+Values: add, multiply
+
+
+Sample Utterances
+SimpleSkill give me a random number
+SimpleSkill a number
+SimpleSkill give me a random number between {low} and {high}
+SimpleSkill a random number between {low} and {high}
+OperationIntent {operation} {x} and {y}
+ResponseIntent {num}
